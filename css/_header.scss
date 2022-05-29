@@ -1,0 +1,148 @@
+.mainHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 40px 0;
+
+  &Inner {
+    max-width: 1184px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &Logo {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &Nav {
+    font-size: 1.071rem;
+    a {
+      margin-right: 34px;
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+      color: #fff;
+
+      &:hover {
+        color: rgba(255, 255, 255, .5);
+        text-decoration: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        padding: 4px 12px 2px 12px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        font-size: .9286rem;
+        background: #f44336;
+
+        &:hover {
+          color: #fff;
+          background: rgba(244, 67, 54, .7);
+        }
+      }
+    }
+
+    &Toggle {
+      display: none;
+    }
+
+    &Overlay {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: 992px) {
+    &Nav {
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      opacity: 0;
+      bottom: 0;
+      z-index: 40;
+      transition: all .15s ease-out 0s;
+
+      .showNav & {
+        left: 0;
+        opacity: 1;
+      }
+
+      &Toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.433rem;
+        color: #fff;
+        font-weight: 900;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: "";
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+        }
+      }
+
+      &Overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #1e2735;
+        opacity: 0.5;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      &Inner {
+        font-size: 1.071rem;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: 20;
+        height: 100%;
+        overflow-y: auto;
+        width: 250px;
+        background: rgba(30, 39, 53, .99);
+
+        a {
+          margin: 0;
+          padding: 10px 0;
+          display: block;
+
+          &.active {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+  }
+}

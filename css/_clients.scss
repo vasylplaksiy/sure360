@@ -1,0 +1,83 @@
+.clients {
+  @extend .box;
+
+  &Title {
+    @extend .boxTitle;
+  }
+
+  &Inner {
+    @extend .boxInner;
+  }
+
+  &Slider {
+    box-shadow: none;
+    height: 60px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &:before,
+    &:after {
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+
+      @media all and (max-width: 992px) {
+        width: 100px;
+      }
+      @media all and (max-width: 767px) {
+        width: 50px;
+      }
+    }
+
+    &:before{
+      left: -1px;
+      top: 0;
+      background: linear-gradient(to right,#fff 0%,rgba(255,255,255,0) 100%);
+
+    }
+    &:after{
+      right: -1px;
+      top: 0;
+      background: linear-gradient(to left,#fff 0%,rgba(255,255,255,0) 100%);
+
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0)
+    }
+
+    100% {
+      transform: translateX(calc(-350px * (var(--clientsLength) / 2)))
+    }
+  }
+
+  &List {
+    animation: scroll calc(var(--clientsLength) * 3s) linear infinite;
+    align-items: center;
+    display: flex;
+    width: calc(350px * var(--clientsLength));
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &El {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
+    img {
+      max-width: 90%;
+      max-height: 60px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #545b65;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: montserrat, sans-serif;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #1e2735;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.286rem;
+}
+
+h3 {
+  font-size: 1.143rem;
+}
+
+@media all and (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.box {
+  padding: 60px 0;
+
+  &Title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 2.286rem;
+
+    @media all and (max-width: 480px) {
+      font-size: 1.5rem;
+      margin-bottom: 27px;
+    }
+
+  }
+
+  &Inner {
+    max-width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+
+
+    @media all and (max-width: 768px) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.btn {
+  padding: 12px 30px;
+  display: inline-block;
+  color: #fff;
+  background: #f44336;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 300ms ease;
+  border-radius: 100px;
+
+  i {
+    margin-right: 6px;
+    font-size: 1.143rem;
+  }
+
+  &:hover {
+    background: #c3362b;
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+  }
+}

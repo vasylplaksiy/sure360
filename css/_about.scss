@@ -1,0 +1,101 @@
+.about {
+  @extend .box;
+  background: #f5f6f7;
+
+  &Title {
+    @extend .boxTitle;
+  }
+
+  &Inner {
+    @extend .boxInner;
+    overflow: hidden;
+  }
+
+  &List {
+    margin: 0 0 0 -15px;
+    display: flex;
+    width: calc(100% + 30px);
+    flex-wrap: wrap;
+
+    @media all and (max-width: 767px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &El {
+    margin: 15px;
+    width: calc(33.3333% - 30px);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(30, 39, 53, 7%);
+    background: #fff;
+    padding: 24px;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media all and (max-width: 767px) {
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    &Header {
+      display: flex;
+      align-items: center;
+    }
+
+    &Icon {
+      img {
+        width: 32px;
+        height: auto;
+      }
+    }
+
+    &Title {
+      margin-bottom: 0;
+      margin-left: 12px;
+      text-transform: uppercase;
+      font-size: 1.043rem;
+    }
+
+    &Text {
+      margin-top: 12px;
+      margin-bottom: 24px
+    }
+
+    &Link {
+      a {
+        display: inline-block;
+        vertical-align: top;
+        font-weight: 600;
+        color: #f44336;
+        text-decoration: none;
+        transition: all 300ms ease;
+
+        &:after {
+          width: 4px;
+          height: 4px;
+          display: inline-block;
+          border: solid 1px #f44336;
+          border-width: 1.5px 1.5px 0 0;
+          transform: rotate(45deg);
+          vertical-align: top;
+          transform-origin: center;
+          margin: 10px 0 0 3px;
+          content: "";
+        }
+      }
+    }
+
+  }
+
+  &Bottom {
+    text-align: center;
+    margin-top: 40px;
+
+    .btn {
+      border-radius: 2px;
+    }
+  }
+
+}

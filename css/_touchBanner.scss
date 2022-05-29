@@ -1,0 +1,82 @@
+.touchBanner {
+  background: #1e2735;
+  padding: 60px 0;
+  position: relative;
+  z-index: 5;
+
+  &Img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: .15;
+    }
+  }
+
+  &Content {
+    color: #fff;
+    max-width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    @media all and (max-width: 768px) {
+      padding: 0 10px;
+    }
+  }
+
+  &Title {
+    margin-bottom: 18px;
+    color:#fff;
+  }
+
+  &Text {
+    margin-bottom: 18px;
+    font-size: 1.143rem;
+    color: rgba(255, 255, 255, .8);
+  }
+
+  &Functional {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .btn {
+      margin: 0 8px 16px 8px;
+      border-radius: 2px;
+
+      @media all and (max-width: 768px) {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media all and (max-width: 992px) {
+  /*  &Title {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    &Text {
+      font-size: 1.2rem;
+    }*/
+  }
+}
